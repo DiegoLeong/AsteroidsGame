@@ -5,7 +5,8 @@ class Spaceship extends Floater
 		corners=4;
 		xCorners = new int[corners]; 
 		yCorners = new int[corners];
-		
+		xCorners[0]=16;
+		yCorners[0]=	
 	}
 
 	public void setX(int x){};  
