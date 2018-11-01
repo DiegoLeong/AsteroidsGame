@@ -8,8 +8,16 @@ public void setup()
 public void draw() 
 {
   //your code here
-  octo.setX(200);
-  octo.setY(200);
   octo.show();
 }
 
+public void keyPressed()
+{
+	if(key=='w')
+	{
+		octo.setX((int)(Math.random()*400)-1);
+		octo.setY((int)(Math.random()*400)-1);
+		octo.setDirectionX((double)Math.random());
+		octo.setDirectionY((double)Math.random());
+	}
+}
