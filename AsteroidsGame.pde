@@ -1,9 +1,11 @@
 //your variable declarations here
 Spaceship octo = new Spaceship();
+//Star[] galaxy = new Star[100];
 public void setup() 
 {
 	background(0);
 	size(800,800);
+	//for(int i = 0; i<100; i++){galaxy.show();}
   //your code here
 }
 public void draw() 
