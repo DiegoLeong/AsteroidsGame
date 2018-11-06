@@ -6,13 +6,15 @@ public void setup()
 {
 	frameRate(120);
 	size(800,800);
-	//for(int i = 0; i<100; i++){galaxy.show();}
+
+	for(int i = 0; i<galaxy.length; i++){ galaxy[i] = new Star();}
   //your code here
 }
 public void draw() 
 {
   //your code here
   background(#2F426D);
+  for(int i = 0; i<galaxy.length; i++){ galaxy[i].show();}
   octo.show();
   octo.move();
   if(w==true){octo.accelerate(0.02);}
