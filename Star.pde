@@ -1,4 +1,4 @@
-/*class Star //note that this class does NOT extend Floater
+class Star //note that this class does NOT extend Floater
 {
   //your code here
   int x;
@@ -12,4 +12,4 @@
   {
   	ellipse(x,y,10,10);
   }
-}*/
+}
