@@ -1,6 +1,7 @@
 //your variable declarations here
 Spaceship octo = new Spaceship();
 Star[] galaxy = new Star[100];
+Asteroid roid = new Asteroid();
 boolean w,a,s,d;
 public void setup() 
 {
@@ -17,11 +18,21 @@ public void draw()
   for(int i = 0; i<galaxy.length; i++){ galaxy[i].show();}
   octo.show();
   octo.move();
+  roid.show();
+  roid.move();
+  roidMovement();
   if(w==true){octo.accelerate(0.02);}
   if(a==true){octo.turn(-2);}
   if(s==true){octo.accelerate(-0.02);}
   if(d==true){octo.turn(2);}
+  
+}
 
+public void roidMovement()
+{
+	roid.setDirectionX(Math.random());
+	roid.setDirectionY(Math.random());
+	roid.turn((int)(Math.random()*30)-2);
 }
 
 public void keyPressed()
