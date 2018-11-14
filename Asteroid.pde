@@ -64,10 +64,3 @@ class Asteroid extends Floater
   }   
 }
 
-public void roidMovement()
-{
-	//roid.setDirectionX(Math.random()*40);
-	//roid.setDirectionY(Math.random()*40);
-	roid.turn((int)(Math.random()*10));
-	roid.accelerate(0);
-}
