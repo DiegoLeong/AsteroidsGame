@@ -30,9 +30,10 @@ public void draw()
 
 public void roidMovement()
 {
-	roid.setDirectionX(Math.random());
-	roid.setDirectionY(Math.random());
-	roid.turn((int)(Math.random()*30)-2);
+	//roid.setDirectionX(Math.random()*40);
+	//roid.setDirectionY(Math.random()*40);
+	roid.turn((int)(Math.random()*10));
+	roid.accelerate(0);
 }
 
 public void keyPressed()

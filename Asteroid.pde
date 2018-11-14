@@ -16,12 +16,15 @@ class Asteroid extends Floater
 		yCorners[2]=-16;	
 		xCorners[3]=16;
 		yCorners[3]=-16;			
-		myCenterX=400;
-		myCenterY=400;
-		myPointDirection=0;
+		myCenterX=(int)(Math.random()*400);
+		myCenterY=(int)(Math.random()*400);
+		myPointDirection=Math.random()*360;
+		//myDirectionX=(int)(Math.random()*5);
+		//myDirectionY=(int)(Math.random()*5);
+		accelerate(1);
 	}
 
-	public int rotationboy = ((int)(Math.random()*360))-180;
+	//public int rotationboy = ((int)(Math.random()*30));
 	public void setX(int x){myCenterX=x;}  
 	public int getX(){return (int)myCenterX;}   
 	public void setY(int y){myCenterY=y;} 
@@ -36,7 +39,7 @@ class Asteroid extends Floater
 	public void move ()   //move the floater in the current direction of travel
   	{      
     //change the x and y coordinates by myDirectionX and myDirectionY    
-    setPointDirection(rotationboy);   
+    //setPointDirection(rotationboy);   
     myCenterX += myDirectionX;    
     myCenterY += myDirectionY;     
 
