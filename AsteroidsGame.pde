@@ -27,20 +27,14 @@ public void draw()
   //roid.show();
   //roid.move();
   
-  if(w==true){octo.accelerate(0.02);}
+  if(w==true){octo.accelerate(0.01);}
   if(a==true){octo.turn(-2);}
-  if(s==true){octo.accelerate(-0.02);}
+  if(s==true){octo.accelerate(-0.01);}
   if(d==true){octo.turn(2);}
   
 }
 
-public void roidMovement()
-{
-	//roid.setDirectionX(Math.random()*40);
-	//roid.setDirectionY(Math.random()*40);
-	roid.turn((int)(Math.random()*10));
-	roid.accelerate(0);
-}
+
 
 public void keyPressed()
 {

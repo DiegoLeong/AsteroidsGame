@@ -21,7 +21,7 @@ class Asteroid extends Floater
 		myPointDirection=Math.random()*360;
 		//myDirectionX=(int)(Math.random()*5);
 		//myDirectionY=(int)(Math.random()*5);
-		accelerate(1);
+		accelerate(.5);
 	}
 
 	//public int rotationboy = ((int)(Math.random()*30));
@@ -35,6 +35,14 @@ class Asteroid extends Floater
 	public double getDirectionY(){return myDirectionY;}   
 	public void setPointDirection(int degrees){myPointDirection=degrees;}   
 	public double getPointDirection(){return myPointDirection;} 
+
+	public void roidMovement()
+	{
+	//roid.setDirectionX(Math.random()*40);
+	//roid.setDirectionY(Math.random()*40);
+	turn((int)(Math.random()*10));
+	accelerate(0);
+	}	
 
 	public void move ()   //move the floater in the current direction of travel
   	{      
