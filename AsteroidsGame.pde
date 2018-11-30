@@ -1,15 +1,21 @@
 //your variable declarations here
 Spaceship octo = new Spaceship();
 Star[] galaxy = new Star[100];
-Asteroid[] roid = new Asteroid[20];
+//Asteroid[] roid = new Asteroid[20];
+ArrayList <Asteroid> roid = new ArrayList <Asteroid>();
 boolean w,a,s,d;
+int roidnumba = 20;
+
 public void setup() 
 {
+	
+
 	frameRate(120);
 	size(800,800);
 
 	for(int i = 0; i<galaxy.length; i++){ galaxy[i] = new Star();}
-	for(int d = 0; d<roid.length; d++){ roid[d] = new Asteroid();}
+	for(int d = 0; d<20; d++){roid.add(new Asteroid());}
+
   //your code here
 }
 public void draw() 
@@ -17,10 +23,14 @@ public void draw()
   //your code here
   background(#2F426D);
   for(int i = 0; i<galaxy.length; i++){ galaxy[i].show();}
-  for(int d = 0; d<roid.length; d++){ 
-  	roid[d].show();
-  	roid[d].move();
-  	roid[d].roidMovement();
+  for(int d = 0; d<roidnumba; d++){ 
+  	roid.get(d).show();
+  	roid.get(d).move();
+  	roid.get(d).roidMovement();
+  	
+  	System.out.println(
+  		dist((float)roid.get(d).myCenterX, (float)roid.get(d).myCenterY, (float)octo.myCenterX, (float)octo.myCenterY)
+  		);
   }
   octo.show();
   octo.move();
