@@ -18,7 +18,7 @@ public void setup()
 
   //your code here
 }
-public void draw() 
+public void draw()
 {
   //your code here
   background(#2F426D);
