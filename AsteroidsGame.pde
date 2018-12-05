@@ -1,5 +1,6 @@
 //your variable declarations here
 Spaceship octo = new Spaceship();
+Bullet pubg = new Bullet();
 Star[] galaxy = new Star[100];
 //Asteroid[] roid = new Asteroid[20];
 ArrayList <Asteroid> roid = new ArrayList <Asteroid>();
