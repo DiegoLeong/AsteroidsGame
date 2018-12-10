@@ -3,10 +3,11 @@ class Bullet extends Floater
   Bullet(){}
   Bullet(Spaceship theShip)
   { 
+    double dRadians = myPointDirection*(Math.PI/180);
     myColor=255;
     corners=4;
-    xCorners = 5 * Math.cos(dRadians) + Spaceship.myDirectionX; 
-    yCorners = 5 * Math.sin(dRadians) + Spaceship.myDirectionY;
+    xCorners = 5 * Math.cos(dRadians) + theShip.myDirectionX; 
+    yCorners = 5 * Math.sin(dRadians) + theShip.myDirectionY;
     xCorners[0]=16;
     yCorners[0]=0;
     xCorners[1]=-4;
@@ -15,10 +16,10 @@ class Bullet extends Floater
     yCorners[2]=0;  
     xCorners[3]=-4;
     yCorners[3]=-8;     
-    myCenterX=Spaceship.myCenterX;
-    myCenterY=Spaceship.myCenterY;
-    myPointDirection=Spaceship.myPointDirection;
-    double dRadians = myPointDirection*(Math.PI/180);
+    myCenterX=theShip.myCenterX;
+    myCenterY=theShip.myCenterY;
+    myPointDirection=theShip.myPointDirection;
+    
   }
 
   public void setX(int x){myCenterX=x;}  
