@@ -1,6 +1,6 @@
 //your variable declarations here
 Spaceship octo = new Spaceship();
-Bullet pubg = new Bullet();
+Bullet pubg = new Bullet(octo);
 Star[] galaxy = new Star[100];
 //Asteroid[] roid = new Asteroid[20];
 ArrayList <Asteroid> roid = new ArrayList <Asteroid>();
@@ -37,7 +37,7 @@ public void draw()
   octo.move();
   //roid.show();
   //roid.move();
-  
+  pubg.show();
   if(w==true){octo.accelerate(0.01);}
   if(a==true){octo.turn(-2);}
   if(s==true){octo.accelerate(-0.01);}

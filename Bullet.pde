@@ -1,24 +1,15 @@
-class Bullet extends Floater  
+class Bullet extends Floater  //Delete and start over
 {   
-  Bullet(){}
   Bullet(Spaceship theShip)
   { 
-    double dRadians = myPointDirection*(Math.PI/180);
-    myColor=255;
-    corners=4;
-    xCorners = 5 * Math.cos(dRadians) + theShip.myDirectionX; 
-    yCorners = 5 * Math.sin(dRadians) + theShip.myDirectionY;
-    xCorners[0]=16;
-    yCorners[0]=0;
-    xCorners[1]=-4;
-    yCorners[1]=8;  
-    xCorners[2]=-12;
-    yCorners[2]=0;  
-    xCorners[3]=-4;
-    yCorners[3]=-8;     
-    myCenterX=theShip.myCenterX;
-    myCenterY=theShip.myCenterY;
+    
+    myColor=255;    
+    myCenterX=400;
+    myCenterY=400;
     myPointDirection=theShip.myPointDirection;
+    double dRadians = myPointDirection*(Math.PI/180);
+    myDirectionX=(5*Math.cos(dRadians))+theShip.myDirectionX;
+    myDirectionY=(5*Math.sin(dRadians))+theShip.myDirectionY;
     
   }
 
@@ -36,7 +27,8 @@ class Bullet extends Floater
   public void show ()  //Draws the floater at the current position  
   {             
     fill(myColor);   
-    stroke(myColor);    
+    stroke(myColor);
+    ellipse(myCenterX, myCenterX, 5, 5);    
     
     //translate the (x,y) center of the ship to the correct position
     translate((float)myCenterX, (float)myCenterY);
