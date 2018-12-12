@@ -4,13 +4,13 @@ class Bullet extends Floater  //Delete and start over
   Bullet(Spaceship theShip)
   { 
     
-    //color(102, 255, 204);    
+    //color cooler = color(102, 255, 204);    
     myCenterX=400;
     myCenterY=400;
     myPointDirection=theShip.myPointDirection;
     double dRadians = myPointDirection*(Math.PI/180);
-    myDirectionX=(5*Math.cos(dRadians))+theShip.myDirectionX;
-    myDirectionY=(5*Math.sin(dRadians))+theShip.myDirectionY;
+    myDirectionX=(5*Math.cos(dRadians))+ theShip.myDirectionX;
+    myDirectionY=(5*Math.sin(dRadians))+ theShip.myDirectionY;
     
   }
 
@@ -27,8 +27,8 @@ class Bullet extends Floater  //Delete and start over
 
   public void show ()  //Draws the floater at the current position  
   {             
-    fill(102, 255, 204);   
-    stroke(102, 255, 204);
+    fill(cooler);   
+    stroke(cooler);
     //ellipse((float)myCenterX, (float)myCenterY, (float)5, (float)5);    
     
     //translate the (x,y) center of the ship to the correct position
