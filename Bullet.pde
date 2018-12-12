@@ -1,9 +1,10 @@
 class Bullet extends Floater  //Delete and start over
 {   
+
   Bullet(Spaceship theShip)
   { 
     
-    myColor=255;    
+    //color(102, 255, 204);    
     myCenterX=400;
     myCenterY=400;
     myPointDirection=theShip.myPointDirection;
@@ -26,9 +27,9 @@ class Bullet extends Floater  //Delete and start over
 
   public void show ()  //Draws the floater at the current position  
   {             
-    fill(myColor);   
-    stroke(myColor);
-    ellipse(myCenterX, myCenterX, 5, 5);    
+    fill(102, 255, 204);   
+    stroke(102, 255, 204);
+    //ellipse((float)myCenterX, (float)myCenterY, (float)5, (float)5);    
     
     //translate the (x,y) center of the ship to the correct position
     translate((float)myCenterX, (float)myCenterY);
@@ -40,7 +41,7 @@ class Bullet extends Floater  //Delete and start over
     rotate(dRadians);
     
     //draw the polygon
-    ellipse(myCenterX,myCenterY,5,5);
+    ellipse((float)myCenterX,(float)myCenterY,(float)5,(float)5);
 
     //"unrotate" and "untranslate" in reverse order
     rotate(-1*dRadians);

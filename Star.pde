@@ -1,6 +1,7 @@
 class Star //note that this class does NOT extend Floater
 {
   //your code here
+
   int x;
   int y;
   Star()
@@ -10,6 +11,7 @@ class Star //note that this class does NOT extend Floater
   }
   public void show()
   {
+    fill(255);
   	ellipse(x,y,2,2);
   }
 }
