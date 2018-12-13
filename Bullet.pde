@@ -1,50 +1,29 @@
-class Bullet extends Floater  //Delete and start over
-{   
-
-  Bullet(Spaceship theShip)
-  { 
-    
-    //color cooler = color(102, 255, 204);    
-    myCenterX=400;
-    myCenterY=400;
-    myPointDirection=theShip.myPointDirection;
-    double dRadians = myPointDirection*(Math.PI/180);
-    myDirectionX=(5*Math.cos(dRadians))+ theShip.myDirectionX;
-    myDirectionY=(5*Math.sin(dRadians))+ theShip.myDirectionY;
-    
+class Bullet extends Floater
+{
+  public Bullet(Spaceship ship){
+    myCenterX = ship.getX();
+    myCenterY = ship.getY();
+    myPointDirection = ship.getPointDirection();
+    double dRadians =myPointDirection*(Math.PI/180);
+    myDirectionX = 7*Math.cos(dRadians) + ship.getDirectionX();
+    myDirectionY = 7*Math.sin(dRadians) + ship.getDirectionY();
+    myColor = 255;
   }
 
-  public void setX(int x){myCenterX=x;}  
-  public int getX(){return (int)myCenterX;}   
-  public void setY(int y){myCenterY=y;} 
-  public int getY(){return (int)myCenterY;}  
-  public void setDirectionX(double x){myDirectionX=x;}   
-  public double getDirectionX(){return myDirectionX;}   
-  public void setDirectionY(double y){myDirectionY=y;}   
-  public double getDirectionY(){return myDirectionY;}   
-  public void setPointDirection(int degrees){myPointDirection=degrees;}   
-  public double getPointDirection(){return myPointDirection;}
-
-  public void show ()  //Draws the floater at the current position  
-  {             
-    fill(cooler);   
-    stroke(cooler);
-    //ellipse((float)myCenterX, (float)myCenterY, (float)5, (float)5);    
-    
-    //translate the (x,y) center of the ship to the correct position
-    translate((float)myCenterX, (float)myCenterY);
-
-    //convert degrees to radians for rotate()     
-    float dRadians = (float)(myPointDirection*(Math.PI/180));
-    
-    //rotate so that the polygon will be drawn in the correct direction
-    rotate(dRadians);
-    
-    //draw the polygon
-    ellipse((float)myCenterX,(float)myCenterY,(float)5,(float)5);
-
-    //"unrotate" and "untranslate" in reverse order
-    rotate(-1*dRadians);
-    translate(-1*(float)myCenterX, -1*(float)myCenterY);
+  public void show(){
+    fill(255);
+    strokeWeight(2);
+    stroke(30, 221, 221, 150);
+    rect((int)myCenterX,(int)myCenterY,20,3,5);
   }
+  public void setX(int x){myCenterX = x;}  
+    public int getX(){return (int)myCenterX;}   
+    public void setY(int y){myCenterY = y;}   
+    public int getY(){return (int)myCenterY;}   
+    public void setDirectionX(double x){myDirectionX = x;}   
+    public double getDirectionX(){return myDirectionX;}   
+    public void setDirectionY(double y){myDirectionY = y;}  
+    public double getDirectionY(){return myDirectionY;}   
+    public void setPointDirection(int degrees){myPointDirection = degrees;}   
+    public double getPointDirection(){return myPointDirection;}
 }

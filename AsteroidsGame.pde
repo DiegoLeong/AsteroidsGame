@@ -1,10 +1,10 @@
 //your variable declarations here
 Spaceship octo = new Spaceship();
-Bullet pubg = new Bullet(octo);
 Star[] galaxy = new Star[100];
 //Asteroid[] roid = new Asteroid[20];
 ArrayList <Asteroid> roid = new ArrayList <Asteroid>();
-boolean w,a,s,d;
+ArrayList <Bullet> pubg = new ArrayList <Bullet>();
+boolean w,a,s,d,f;
 
 public void setup() 
 {
@@ -37,7 +37,15 @@ public void draw()
   octo.move();
   //roid.show();
   //roid.move();
-  pubg.show();
+  
+  //shootytime
+  if(f==true)
+  	{	
+  		for(int i = pubg.size(); i<pubg.size(); i++){ galaxy[i].show();}
+  		pubg.add();
+  		pubg.get()
+  	}
+  //movement keys	
   if(w==true){octo.accelerate(0.01);}
   if(a==true){octo.turn(-2);}
   if(s==true){octo.accelerate(-0.01);}
@@ -48,8 +56,12 @@ public void draw()
 
 
 public void keyPressed()
-{
+{	
 	if(key=='f')
+	{
+		f=true;
+	}
+	if(key=='g')
 	{
 		octo.setX((int)(Math.random()*800)-1);
 		octo.setY((int)(Math.random()*800)-1);
@@ -75,7 +87,11 @@ public void keyPressed()
 	}
 }
 public void keyReleased()
-{
+{	
+	if(key=='f')
+	{
+		f=false;
+	}
 	if(key=='w')
 	{
 		w=false;
