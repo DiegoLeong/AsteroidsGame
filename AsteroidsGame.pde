@@ -41,9 +41,11 @@ public void draw()
   //shootytime
   if(f==true)
   	{	
-  		for(int i = pubg.size(); i<pubg.size(); i++){ galaxy[i].show();}
-  		pubg.add();
-  		pubg.get()
+  		for(int i = pubg.size(); i<pubg.size(); i++){ 
+
+  		pubg.add(new Bullet(octo));
+  		pubg.get(i).show(); 
+  		}	
   	}
   //movement keys	
   if(w==true){octo.accelerate(0.01);}
