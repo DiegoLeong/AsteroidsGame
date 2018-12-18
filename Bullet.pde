@@ -14,7 +14,7 @@ class Bullet extends Floater
     fill(255);
     strokeWeight(2);
     stroke(30, 221, 221, 150);
-    rect((int)myCenterX,(int)myCenterY,20,3,5);
+    ellipse((int)myCenterX,(int)myCenterY,3,3);
   }
   public void setX(int x){myCenterX = x;}  
     public int getX(){return (int)myCenterX;}   
