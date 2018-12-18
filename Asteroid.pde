@@ -17,8 +17,8 @@ class Asteroid extends Floater
 		yCorners[2]=-scaler;	
 		xCorners[3]=scaler;
 		yCorners[3]=-scaler;			
-		myCenterX=(int)(Math.random()*400);
-		myCenterY=(int)(Math.random()*400);
+		myCenterX=(int)(Math.random()*800);
+		myCenterY=(int)(Math.random()*800);
 		myPointDirection=Math.random()*360;
 		//myDirectionX=(int)(Math.random()*5);
 		//myDirectionY=(int)(Math.random()*5);
